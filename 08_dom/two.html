@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom | Java Script</title>
+<style>
+    body{
+        background-color: #212122;
+        color:#fff;
+    }
+</style>
+</head>
+<body>
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+        <div class="day">Sunday</div>
+    </div>
+  
+</body>
+<script>
+    const parents =  document.querySelector('.parent');
+    // console.log(parents);
+    // console.log(parents.children);
+    // console.log(parents.children[3]);
+    // console.log(parents.children[3].innerHTML);
+
+    for (let i = 0; i < parents.children.length; i++) {
+        const element = parents.children[i].innerHTML;
+        // console.log(element);
+    }
+
+
+    parents.children[1].style.color ="red";
+
+        // console.log(parents.firstElementChild.innerHTML);
+        // console.log(parents.lastElementChild.innerHTML);
+
+
+   const dayOne =  document.querySelector('.day')
+        //    console.log(dayOne);
+
+        //    console.log(dayOne.parentElement.innerHTML);
+        //    console.log(dayOne.nextElementSibling.innerHTML); 
+
+
+   console.log("NODES: ",parents.childNodes)
+</script>
+</html>
