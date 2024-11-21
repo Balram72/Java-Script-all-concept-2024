@@ -1,0 +1,67 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  nav {
+    background-color: #333;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  main {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .project-link {
+    display: block;
+    width: calc(100% - 2rem); /* Full width for mobile */
+    max-width: 300px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #444;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    background-color: #555;
+  }
+  
+  /* Desktop-specific styles */
+  @media (min-width: 768px) {
+    .projects {
+      justify-content: flex-start;
+      gap: 1.5rem;
+    }
+  
+    .project-link {
+      width: calc(25% - 2rem); /* Four columns on larger screens */
+      margin: 0.5rem;
+    }
+  }
+  
