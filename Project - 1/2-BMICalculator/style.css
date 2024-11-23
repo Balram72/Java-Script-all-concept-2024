@@ -1,0 +1,145 @@
+/* styles.css */
+
+/* General Reset */
+body, h1, h3, p, nav, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and Container Styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 500px;
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #0077ff;
+  }
+  
+  form p {
+    margin: 1rem 0;
+  }
+  
+  label {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  input {
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 40px);
+  }
+  
+  button {
+    background-color: #0077ff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  button:hover {
+    background-color: #0056cc;
+  }
+  
+  /* Navigation Styling */
+  nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  nav a:hover {
+    color: #ffd700;
+  }
+  
+  /* Results and Weight Guide */
+  #results {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #007700;
+    font-weight: bold;
+  }
+  
+  #weight-guide {
+    margin-top: 30px;
+    text-align: left;
+  }
+  
+  #weight-guide h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  #weight-guide p {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    body {
+      padding: 10px;
+    }
+  
+    .container {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    input {
+      width: calc(100% - 20px);
+    }
+  
+    button {
+      width: 100%;
+      padding: 12px;
+    }
+  
+    nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    nav a {
+      font-size: 1.1rem;
+    }
+  }
+  
