@@ -1,0 +1,140 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  /* Navigation bar */
+  nav {
+    display: flex;
+    background-color: #333;
+    padding: 10px 15px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ffd700;
+  }
+  
+  /* Canvas styling */
+  .canvas {
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Headings */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  h2 span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Buttons */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  #grey {
+    background-color: grey;
+  }
+  
+  #white {
+    background-color: white;
+    border: 2px solid #ddd;
+  }
+  
+  #blue {
+    background-color: blue;
+  }
+  
+  #yellow {
+    background-color: yellow;
+  }
+  #red {
+    background-color: red;
+  }
+  
+  /* Button hover effect */
+  .button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    nav {
+      flex-wrap: wrap;
+    }
+  
+    nav a {
+      margin: 5px 10px;
+    }
+  
+    .canvas {
+      padding: 15px;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1rem;
+    }
+  
+    .button-container {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  
+    .button {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
