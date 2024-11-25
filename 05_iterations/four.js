@@ -11,9 +11,9 @@
     */
 //for in loop : direct print the key  (print the index value)
     /* Ex:-
-            const programming = ["js","rb","py","java","cpp"]
+            const programming = ["js","rb","py","java","cpp","c"]
             for (const key in programming) {
-                console.log(key)    output:- 0,1,2,3,4
+                console.log(key)    output:- 0,1,2,3,4,5
             }
     */
 
