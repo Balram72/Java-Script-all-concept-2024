@@ -14,7 +14,7 @@
 // Using the Arrow function
  (()=>{
     // simple IIFE
-    console.log(`DB CONNECTED TWO`);
+    console.log(`DB CONNECTED Two`);
 
  })();
 
