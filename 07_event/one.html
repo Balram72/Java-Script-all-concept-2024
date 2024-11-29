@@ -43,33 +43,56 @@
                 // 1) event bubblying - > defult -> false   
                     // bubblying   - >  inside > outside  ex:- child to parent
 
-                          document.getElementById('images').addEventListener('click',(e)=>{
-                                console.log("clicked inside the ul");
-                            },false)
+                        //   document.getElementById('images').addEventListener('click',(e)=>{
+                        //         console.log("clicked inside the ul");
+                        //     },false)
 
-                            document.getElementById('owl').addEventListener('click',(e)=>{
-                                console.log("owl clicked");
-                            },false)
+                        //     document.getElementById('owl').addEventListener('click',(e)=>{
+                        //         console.log("owl clicked");
+                        //     },false)
 
                 // 2) event capturing
                      // bubblying   - >  outside -> inside ex:- parent to child
-                        document.getElementById('images').addEventListener('click',(e)=>{
-                            console.log("clicked inside the ul");
-                        },true)
 
-                        document.getElementById('owl').addEventListener('click',(e)=>{
-                            console.log("owl clicked");
-                        },true)
+                            // document.getElementById('images').addEventListener('click',(e)=>{
+                            //     console.log("clicked inside the ul");
+                            // },true)
+
+                            // document.getElementById('owl').addEventListener('click',(e)=>{
+                            //     console.log("owl clicked");
+                            // },true)
 
             // propagation
-                        document.getElementById('images').addEventListener('click',(e)=>{
-                            console.log("clicked inside the ul");
-                        },false)
+                        // document.getElementById('images').addEventListener('click',(e)=>{
+                        //     console.log("clicked inside the ul");
+                        // },false)
 
-                        document.getElementById('owl').addEventListener('click',(e)=>{
-                            console.log("owl clicked");
-                            e.stopPropagation();
-                        },false)
+                        // document.getElementById('owl').addEventListener('click',(e)=>{
+                        //     console.log("owl clicked");
+                        //     e.stopPropagation();
+                        // },false)
+
+            //defaultPrevented()
+
+                // document.getElementById('google').addEventListener('click',(e)=>{
+                //     e.preventDefault();
+                //     e.stopPropagation();
+                //     console.log(e);
+                // },false)
+
+// project Remove the image project  ->  spillover
+            document.querySelector('#images').addEventListener('click',(e)=>{
+                // console.log(e.target);
+                   let img = e.target.tagName;
+                   console.log(e.target.parentNode);
+                   if(img === 'IMG'){
+                     console.log(e.target.id);
+                     let removeIt  = e.target.parentNode
+                     //  removeIt.remove();         //-> method One  
+                    removeIt.parentNode.removeChild(removeIt); //-> method One  
+                   }
+                   
+            },false);
 
     </script>
 </html>
