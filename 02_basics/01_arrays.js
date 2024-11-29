@@ -1,56 +1,59 @@
-//array
-   // -> enables storing a collection of multiple items under a single variable name, and has members for performing common array operations
+// 1. Array Literal – Quick and commonly used way to create arrays.
+const myArr = [0, 1, 2, 3, 4, 5, true, "balram"]; // Mixed array
+const myArr1 = [0, 1, 2, 3, 5]; // Number array
+const myHeroes = ["shaktiman", "naagraj"]; // String array
 
-    //-> JavaScript arrays are resizable and can contain a mix of different data types
+// 2. Array Constructor – Using new Array(), typically less common.
+const myArr2 = new Array(1, 2, 3, 4, 5); // Number array
 
-    //-> JavaScript arrays are not associative arrays 
 
-    //-> javaScript arrays are zero-indexed
 
-    //-> JavaScript array-copy operations create shallow copies.
+// JavaScript provides many built-in methods to manage and manipulate arrays. Below are some examples:
 
-    //first type Declaration
-const myArr = [0,1,2,3,4,5,true,"balram"];//mixed array
-const myArr1 = [0,1,2,3,5];
-const myHeors =["shaktiman","naagraj"]
-  //second type Declaration
-const myArr2 = new Array(1,2,3,4,5)
-    // console.log(myArr1[0])
+// 1. Basic Array Operations
+const myNewArray = [0, 1, 2, 3, 5];
 
-// Array methods
-    const myNewArray = [0,1,2,3,5];
-     myNewArray.push(6) 
-     myNewArray.pop() //only remove the array last value
-     myNewArray.unshift(9) //insert the value first index point. output -> [ 9, 0, 1, 2, 3, 5 ]
-     myNewArray.shift() //remove the unshift value and  remove the first index value in array 
-        //output -> [ 0, 1, 2, 3, 5 ] // unshift
-        //output -> [1, 2, 3, 5 ]    // normal array work
-      console.log(myNewArray);  
-      console.log(myNewArray.includes(5))
-      console.log(myNewArray.indexOf(3))
-      console.log(myNewArray.indexOf(9)) 
-        // output = -1 not use the 9 value
+// Adds a value to the end of the array
+myNewArray.push(6); // [0, 1, 2, 3, 5, 6]
 
-let newArrey = [1,2,3,4,5,6]
-    const arrayJoin = newArrey.join();
-        console.log(newArrey)//output:[ 1, 2, 3, 4, 5, 6 ]
-        console.log(typeof newArrey)  // tyep : object
-        console.log(arrayJoin) //output:1,2,3,4,5,6
-        console.log(typeof arrayJoin) //tyep : string
+// Removes the last value of the array
+myNewArray.pop(); // [0, 1, 2, 3, 5]
 
-// slice , splice
-let newArrey1 = [0,1,2,3,4,5]
-console.log("A ",newArrey1); 
-    //output : A  [ 0, 1, 2, 3, 4, 5 ]
-const myn1 = newArrey1.slice(1,3)//Not Manipulate the original array using the splice Method
-console.log(myn1); 
-    // output [ 1, 2 ]
-console.log("B ",newArrey1)
-    // Output : B  [ 0, 1, 2, 3, 4, 5 ]
-const myn2 = newArrey1.splice(1,3) // Manipulate the original array using the  splice Method
-console.log("C ",newArrey1)
-    // output : C  [ 0, 4, 5 ]
-console.log(myn2);
-    // Output : [ 1, 2, 3 ] 
-console.log("C ",newArrey1)
-    // output : C  [ 0, 4, 5 ]
+// Adds a value to the start of the array
+myNewArray.unshift(9); // [9, 0, 1, 2, 3, 5]
+
+// Removes the first value from the array
+myNewArray.shift(); // [0, 1, 2, 3, 5]
+
+// Check if array includes a specific value
+console.log(myNewArray.includes(5)); // true
+
+// Find the index of a value (returns -1 if not found)
+console.log(myNewArray.indexOf(3)); // 3
+console.log(myNewArray.indexOf(9)); // -1 (not in array)
+
+
+// Join Array Elements
+// The join() method combines array elements into a string:
+
+let newArray = [1, 2, 3, 4, 5, 6];
+const arrayJoin = newArray.join();
+
+console.log(newArray); // [1, 2, 3, 4, 5, 6]
+console.log(typeof newArray); // object (arrays are objects in JavaScript)
+console.log(arrayJoin); // "1,2,3,4,5,6" (joined string)
+console.log(typeof arrayJoin); // string
+
+
+// Slice – Returns a portion of an array (non-destructive, does not modify original array).
+
+let newArray1 = [0, 1, 2, 3, 4, 5];
+const slicedArray = newArray1.slice(1, 3); // [1, 2]
+console.log(slicedArray); // Output: [1, 2]
+console.log("Original Array:", newArray1); // [0, 1, 2, 3, 4, 5]
+
+// Splice – Removes or replaces elements in an array (destructive, modifies original array).
+
+const splicedArray = newArray1.splice(1, 3); // [1, 2, 3]
+console.log("Modified Array:", newArray1); // [0, 4, 5]
+console.log(splicedArray); // Output: [1, 2, 3]
