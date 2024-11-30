@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java Script Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    setTimeout(()=>{
+            console.log("Balram"); 
+    },2000)
+
+    const fun = () =>{
+        console.log("Balram");
+    }
+    const changeText = () => {
+        document.querySelector('h1').innerHTML = "best Js Series"
+    } 
+    const changeMe = setTimeout(changeText,2000);
+    document.querySelector('#stop').addEventListener('click',(e)=>{
+       clearTimeout(changeMe)
+       console.log("STOPPED")
+    })
+    
+</script>
+</html>
