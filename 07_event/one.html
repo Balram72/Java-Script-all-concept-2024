@@ -63,22 +63,22 @@
                             // },true)
 
             // propagation
-                        // document.getElementById('images').addEventListener('click',(e)=>{
-                        //     console.log("clicked inside the ul");
-                        // },false)
+                        document.getElementById('images').addEventListener('click',(e)=>{
+                            console.log("clicked inside the ul");
+                        },false)
 
-                        // document.getElementById('owl').addEventListener('click',(e)=>{
-                        //     console.log("owl clicked");
-                        //     e.stopPropagation();
-                        // },false)
+                        document.getElementById('owl').addEventListener('click',(e)=>{
+                            console.log("owl clicked");
+                            e.stopPropagation();
+                        },false)
 
             //defaultPrevented()
 
-                // document.getElementById('google').addEventListener('click',(e)=>{
-                //     e.preventDefault();
-                //     e.stopPropagation();
-                //     console.log(e);
-                // },false)
+                document.getElementById('google').addEventListener('click',(e)=>{
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log(e);
+                },false)
 
 // project Remove the image project  ->  spillover
             document.querySelector('#images').addEventListener('click',(e)=>{
