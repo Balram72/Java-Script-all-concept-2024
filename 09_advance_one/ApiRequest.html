@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Profile</title>
+    <style>
+        /* Card styling */
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 100%; /* Default full width for smaller screens */
+            max-width: 400px; /* Limit the card's max width */
+            margin: auto; /* Center the card */
+            margin-top: 50px;
+            border-radius: 8px; /* Add rounded corners */
+            overflow: hidden; /* Prevent content overflow */
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        /* Image styling */
+        img {
+            width: 100%; /* Responsive image */
+            height: auto;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        /* Container styling */
+        .container {
+            padding: 16px;
+            text-align: center; /* Center text */
+        }
+
+        .container h4, .container p {
+            margin: 8px 0;
+        }
+
+        /* Responsive design */
+        @media (min-width: 600px) {
+            .card {
+                width: 50%; /* Adjust for medium screens */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .card {
+                width: 40%; /* Adjust for larger screens */
+            }
+        }
+    </style>
+</head>
+<body style="background-color: #212121; color:orange;" id="bd">
+    <!-- api is a talking language in between The Two System
+         exam : backend and frontend
+              : java and javascript
+
+     https://randomapi.com/
+     https://jsonformatter.org/ read the api easy -->
+
+    <!-- 0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete. -->
+</body>
+    <script>
+          const bd = document.getElementById('bd');
+          const requestUrl = "https://api.github.com/users/Balram72";
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET',requestUrl);
+          xhr.onreadystatechange = function(){
+            console.log(xhr.readyState);
+            if(xhr.readyState === 4){
+                const data = JSON.parse(this.responseText);
+                  console.log(typeof data);
+                  console.log(data);
+                bd.innerHTML = `
+                        <div class="card">
+                            <img src="${data.avatar_url}" alt="Avatar" style="width:100%">
+                            <div class="container">
+                                <h4><b>${data.name}</b></h4>
+                                <p>Followers :  ${data.followers} </p>
+                            </div>
+                        </div>
+                        `;  
+            }
+          }
+          xhr.send();
+    </script>
+</html>
