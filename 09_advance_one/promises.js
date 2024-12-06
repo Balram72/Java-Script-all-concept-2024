@@ -88,7 +88,6 @@ async function consumePromiseSix(){
         console.log(err)
     } 
  }
-
  consumePromiseSix()
 
 
