@@ -1,7 +1,6 @@
 // Question 1;
 // let myName = "Balram      ";
   // console.log(myName.trim().length);  // output -> 6
-
 //     console.log(myName.truelength())
 
 
