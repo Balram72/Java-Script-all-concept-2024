@@ -12,3 +12,5 @@ function creatUser(username,email,password){
 
 const user = new creatUser("Balram","bal@gmail.com","123")
 console.log(user);
+const newUser = new creatUser("Balram","bal@gmail.com","123")
+console.log(newUser);
