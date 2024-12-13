@@ -1,0 +1,47 @@
+<!-- 
+  
+Q.1)  workign hours       earn
+     8                  400
+     +4                 100
+     +4                 200
+-->
+<!-- Q1. Ans -->
+<script>
+      let workinghours = parseInt(prompt());
+      let salary = 0;
+      if (workinghours == 8) {
+        salary = 400
+      } else if (workinghours > 8 && workinghours <= 12) {
+        salary = 400 + (workinghours - 8) * 100
+      } else if (workinghours > 12 && workinghours <= 16) {
+        salary = 400 + (workinghours - 12) * 200
+      } else {
+        document.write(`Invalid Working Hours <br/>`)
+      }
+      document.write(`emaploye worked for ${workinghours} hours and earn to ${salary}`);
+</script>
+
+
+
+<!-- 
+  Q.2)     marks              result
+           >=60                 1
+          >= 50,<60             2
+          >=33,< 50             3
+-->
+<!-- Q2. Ans -->
+<script>
+    let name = prompt("Plase Enter Your Name");
+    let marks = parseFloat(prompt("Plase Enter Your marks"));
+    let result = 0;
+    if (marks >= 60) {
+      result = "First"
+    } else if (marks >= 50 && marks < 60) {
+      result = "Second"
+    } else if (marks >= 33 && marks < 50) {
+      result = "Third"
+    } else {
+      result = "Fail"
+    }
+    document.write(`Student Name is ${name} ,   Marks ${marks}% and Result ${result}`);
+  </script>
