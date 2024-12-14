@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let day = prompt();
+        switch (day) {
+          case "sunday":
+            document.write("Today Is Sunday")
+            break;
+          case "monday":
+            document.write("Today Is Monday")
+            break;
+          case "tuesday":
+            document.write("Today Is tuesday")
+            break;
+          case "wednesday":
+            document.write("Today Is wednesday")
+            break;
+          case "thursday":
+            document.write("Today Is Thursday")
+            break;
+          case "Friday":
+            document.write("Today Is Friday")
+            break;
+          case "saturday":
+            document.write("Today Is saturday")
+            break;
+          default:
+            document.write("Plase selectd Day")
+            break;
+        }
+      
+        let num = parseInt(prompt());
+        switch (num) {
+          case 1:
+            document.write("1")
+            break;
+          case 2:
+            document.write("2")
+            break;
+          default:
+            document.write("Invalid Number")
+            break;
+        }
+      
+        let num1 = parseInt(prompt());
+        switch (num1) {
+          case 1.0:
+            document.write("1")
+            break;
+          case 2.0:
+            document.write("2")
+            break;
+          default:
+            document.write("Invalid Number")
+            break;
+        }
+      
+        let value = parseInt(prompt());
+        let value1 = parseInt(prompt());
+        switch (value > value) {
+          case true:
+            document.write("1")
+            break;
+          case false:
+            document.write("0")
+            break;
+          default:
+            document.write("Invalid Number")
+            break;
+        }
+      
+        for (let i = 1; i <= 5; i++) {
+          if (i % 2 == 0) {
+            document.write(`${i} <br/>`);
+          }
+        }
+      
+        // write a program factrolial Number  (5*4*3*2*1)
+        let factNumber = parseInt(prompt())
+        let fact = 1;
+        for (let i = 1; i <= factNumber; i++) {
+          fact *= i;
+        }
+        document.write(`the factorial of ${factNumber} is ${fact}`)
+      
+      
+      </script>
+</body>
+</html>
