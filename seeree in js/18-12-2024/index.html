@@ -1,0 +1,65 @@
+<!-- Array -->
+<!-- 
+array is a the collection of similer as well as dissimilar type of data.
+it is a data structure 
+it is used to parepar a list
+it is store data index wise
+array index alwayes start from 0
+array length always start from 1 
+-->
+  <script>
+    // const arr = [10, 'balram', 10.9, true, { 'name': 'balram' }, [909090, 8080808]]
+    // console.log(arr);
+  </script>
+  <script>
+
+    // searching 
+    const arr1 = [90, 80, 30, 20, 40, 10];
+    const element = 20
+  
+    // for (const val of arr1) {
+    //   if (val == element) {
+    //     document.write("the value is exists in the array");
+    //   }
+    // }
+    // document.write("<br/>");
+  
+    // for (const i in arr) {
+    //   if (arr[i] == element) {
+    //     document.write(`The value is exist in ${i} Position  And Value is ${element}`);
+    //   }
+    // }
+  
+  
+    for (let i = 0; i <= arr1.length; i++) {
+      if (arr1[i] == element) {
+        document.write(`The value is exist in ${i} Position`);
+      }
+    }
+
+        // shorting
+        const arr2 = [5, 80, 30, 20, 40, 10];
+  console.log(arr2);
+  for (let i = 0; i <= arr2.length; i++) {
+    for (let j = 0; j <= i; j++) {
+      if (arr2[i] > arr2[j]) {
+        let temp = arr2[i];
+        arr2[i] = arr2[j];
+        arr2[j] = temp;
+      }
+    }
+  }
+  console.log(arr2);
+
+  const arr3 = [5, 80, 30, 20, 40, 10];
+  for (let i = 0; i <= arr3.length; i++) {
+    for (let j = 0; j <= i; j++) {
+      if (arr3[i] < arr3[j]) {
+        let temp = arr3[i];
+        arr3[i] = arr3[j];
+        arr3[j] = temp;
+      }
+    }
+  }
+  console.log(arr3);
+  </script>
