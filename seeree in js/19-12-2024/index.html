@@ -1,0 +1,62 @@
+<!-- Array Function -->
+ 
+<!-- <script>
+  const fruit = ['apple', 'banana', 'orange', 'grapes'];
+  const text = `<ul>
+    ${fruit.map((value, index) =>
+    `<li>${value}</li>`
+  )} </ul >`;
+  document.write(text);
+  console.log(text);
+</script> -->
+
+<script>
+    // Map function
+    const arr = [10, 20, 30, 40, 50];
+    console.log(arr)
+    let bar = arr.map((value, index) => {
+      return value * 2;
+    });
+    console.log(bar)
+  </script>
+  <!-- Note:  It will create a new Array -->
+  
+  <script>
+    // filter function
+    const arr1 = [1, 2, 3, 4, 5];
+    console.log(arr1)
+    let bar1 = arr1.filter((value, index) => {
+      return value % 2 == 0;
+    });
+    console.log(bar1)
+  </script>
+  
+  
+  <script>
+    // reduce function
+    const arr2 = [1, 2, 3, 4, 5];
+    console.log(arr2)
+    let bar2 = arr2.reduce((previousValue, currentValue) => {
+      return previousValue + currentValue;
+    });
+    console.log(bar2)
+  </script>
+  
+  <script>
+    // includes function
+    const arr3 = [1, 2, 3, 4, 5];
+    console.log(arr3)
+    let bar3 = arr3.includes(9)
+    if (bar3) {
+      console.log("yes")
+    } else {
+      console.log("No")
+    }
+  </script>
+  <script>
+    // includes function
+    const arr4 = [1, 2, 3, 4, 5];
+    console.log(arr4)
+    let bar4 = arr4.find(value => value > 3);
+    console.log(bar4)
+  </script>
