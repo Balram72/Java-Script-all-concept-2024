@@ -1,7 +1,7 @@
 <script>
   // 1. define a function
   // 2. function accepts some arguments
-  function add(a, b) {
+  function add(a, b) {  //-> function definition -> formal argument
     //3. proccess the arguments
     res = a + b;
     return res;
@@ -9,6 +9,34 @@
   }
   // 5. call the functio in 
   //6. retuen value assign to a variable
-  a = add(1, 2)
+  a = add(1, 2)  //-> function call -> actual argument
   document.write(a)
+</script>
+<!-- 
+
+  -> why argument 
+      -> the argument concept comes to market to send data from one function to another function
+  -> Argument is of 2 type
+      -> formal argument 
+            -> the argument use in function definition 
+      -> actual argument
+            -> the argument use in function call
+ -->
+
+<!--
+  -> according to uses the argument are devided in 2 type
+      1) pass by value
+          -> if we are trying to change  the original value from function definition. if the value wan't change that is call by value because it allocates 2 time.
+      
+      2) pass by  
+
+-->
+<!-- pass by value example -->
+<script>
+      function show(a){
+            a = 20;
+    }
+let a = 10;
+show(a)
+document.write(a);
 </script>
