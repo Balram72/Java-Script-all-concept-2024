@@ -28,15 +28,40 @@
       1) pass by value
           -> if we are trying to change  the original value from function definition. if the value wan't change that is call by value because it allocates 2 time.
       
-      2) pass by  
-
+      2) pass by reference
+          -> if we are trying to change the original value from function definition. if the original value got modified that concept is know as pass by reference
+          -> it is fulfilled with object but not with a normal variable 
+      3)dufult argument
+            -> if we pass n number of argument if a function definition we have n number of argument in function call.if we are not assing that much argument the aim of our program will not fulfill. so avoid this we have to use defult argument
+            -> in defult argument we have to pass a default for each argument at function definition.
 -->
 <!-- pass by value example -->
 <script>
-      function show(a){
-            a = 20;
-    }
-let a = 10;
-show(a)
-document.write(a);
+  function show(a) {
+    a = 20;
+  }
+  let a = 10;
+  show(a)
+  // document.write(a);
+</script>
+
+<!-- pass by reference example -->
+
+<script>
+  function show1(obj) {
+    obj.a = 100;
+    obj.b = 200;
+  }
+  let obj = { a: 10, b: 20 }
+  console.log(obj.a, obj.b)
+  show1(obj)
+  console.log(obj.a, obj.b)
+</script>
+
+<!-- Dufult argument example -->
+<script>
+  function show2(a = 10, b = 20) {
+    console.log(a, b)
+  }
+  show2(100)
 </script>
